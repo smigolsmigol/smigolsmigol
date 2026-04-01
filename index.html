@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+* { margin: 0; padding: 0; }
+body { background: #0d1117; display: flex; justify-content: center; padding: 2em; }
+.terminal {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.2em 1.4em;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  color: #c9d1d9;
+  width: 740px;
+  position: relative;
+  overflow: hidden;
+}
+.terminal::before {
+  content: '';
+  display: block;
+  margin-bottom: 1em;
+  background: radial-gradient(circle at 12px 8px, #f47067 5px, transparent 5px),
+              radial-gradient(circle at 32px 8px, #d4a55a 5px, transparent 5px),
+              radial-gradient(circle at 52px 8px, #7ee687 5px, transparent 5px);
+  height: 16px;
+}
+
+/* Ambient glow behind terminal */
+.terminal::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(ellipse at center, rgba(126,230,135,0.03) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.line { opacity: 0; white-space: pre; line-height: 1.6; position: relative; }
+.line.visible { animation: fadeIn 0.15s ease forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateX(-2px); } to { opacity: 1; transform: translateX(0); } }
+
+/* Tech tags get a subtle pulse on appear */
+.t { color: #ffa657; display: inline; }
+.line.visible .t { animation: techPop 0.3s ease; }
+@keyframes techPop { 0% { color: #fff; text-shadow: 0 0 6px rgba(255,166,87,0.6); } 100% { color: #ffa657; text-shadow: none; } }
+
+/* Stats get a count-up glow */
+.v { color: #a5d6ff; }
+.line.visible .v { animation: valGlow 0.5s ease; }
+@keyframes valGlow { 0% { color: #fff; text-shadow: 0 0 8px rgba(165,214,255,0.8); } 100% { color: #a5d6ff; text-shadow: none; } }
+
+/* Section headers get underline sweep */
+.section-header { color: #484f58; position: relative; display: inline-block; }
+.line.visible .section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 100%; height: 1px;
+  background: linear-gradient(90deg, #7ee687, transparent);
+  animation: sweepIn 0.4s ease forwards;
+}
+@keyframes sweepIn { from { width: 0; } to { width: 100%; } }
+
+/* Separator line gets drawn */
+.sep { color: #21262d; }
+
+/* Decompose effect */
+.line.decompose { animation: decompose 1.5s ease forwards !important; }
+@keyframes decompose {
+  0% { opacity: 1; transform: translateX(0) scaleY(1); filter: blur(0); }
+  30% { opacity: 1; transform: translateX(0) scaleY(1); filter: blur(0); letter-spacing: 0; }
+  50% { opacity: 0.8; letter-spacing: 2px; filter: blur(0.5px); color: #7ee687; }
+  70% { opacity: 0.5; letter-spacing: 8px; transform: translateX(20px) scaleY(0.5); filter: blur(1px); }
+  100% { opacity: 0; letter-spacing: 30px; transform: translateX(100px) scaleY(0); filter: blur(3px); }
+}
+
+/* Falling chars */
+.fall-char {
+  position: absolute;
+  font-size: 11px;
+  opacity: 0;
+  pointer-events: none;
+  font-family: 'JetBrains Mono', monospace;
+}
+.fall-char.active {
+  animation: charFall var(--duration) linear forwards;
+  animation-delay: var(--delay);
+}
+@keyframes charFall {
+  0% { opacity: 0.9; transform: translateY(0) rotate(0deg); }
+  20% { opacity: 0.8; }
+  50% { transform: translateY(calc(var(--fall-dist) * 0.5)) rotate(var(--rot)); }
+  80% { opacity: 0.2; }
+  100% { opacity: 0; transform: translateY(var(--fall-dist)) rotate(calc(var(--rot) * 2)); }
+}
+
+/* Scanlines */
+.scanlines {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none; z-index: 5; opacity: 0;
+  background: repeating-linear-gradient(0deg, rgba(126,230,135,0.03) 0px, rgba(126,230,135,0.03) 1px, transparent 1px, transparent 2px);
+}
+.scanlines.active { opacity: 1; animation: scanFlicker 0.08s infinite; }
+@keyframes scanFlicker { 50% { opacity: 0.4; } }
+
+/* CRT flash */
+.crt-flash {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none; z-index: 6; opacity: 0; background: white;
+}
+.crt-flash.active { animation: crtFlash 0.15s ease-out; }
+@keyframes crtFlash { 0% { opacity: 0.5; } 100% { opacity: 0; } }
+
+/* Horizontal glitch bars */
+.glitch-bar {
+  position: absolute; left: 0; right: 0; height: 3px;
+  pointer-events: none; z-index: 7; opacity: 0;
+}
+.glitch-bar.active { animation: glitchBar 0.08s ease; }
+@keyframes glitchBar { 0% { opacity: 0.8; transform: translateX(-5px); } 50% { opacity: 0.6; transform: translateX(8px); } 100% { opacity: 0; } }
+
+/* Final message */
+.final-msg {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  font-weight: 700;
+  color: #7ee687;
+  opacity: 0;
+  z-index: 10;
+  text-align: center;
+  white-space: pre;
+  letter-spacing: 1px;
+}
+.final-msg.visible { animation: finalFade 2s ease forwards; }
+@keyframes finalFade {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); filter: blur(8px); letter-spacing: 12px; }
+  40% { opacity: 1; filter: blur(0); }
+  60% { text-shadow: 0 0 20px rgba(126,230,135,0.6), 0 0 40px rgba(126,230,135,0.2); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); letter-spacing: 1px; text-shadow: 0 0 10px rgba(126,230,135,0.3); }
+}
+
+.p { color: #7ee687; } .d { color: #484f58; } .c { color: #d2a8ff; }
+.f { color: #79c0ff; }
+.cursor { display: inline-block; width: 8px; height: 15px; background: #7ee687; animation: blink 1s step-end infinite; vertical-align: middle; }
+@keyframes blink { 50% { opacity: 0; } }
+</style>
+</head>
+<body>
+<div class="terminal" id="term">
+  <div class="scanlines" id="scanlines"></div>
+  <div class="crt-flash" id="flash"></div>
+  <div class="final-msg" id="final">much more brewing.<span class="cursor"></span></div>
+
+  <div class="line" data-delay="200"><span class="p">f3d1</span> <span class="d">~</span> <span class="c">neofetch</span> <span class="f">--stack</span> <span class="f">--real</span></div>
+  <div class="line" data-delay="500"></div>
+  <div class="line" data-delay="650"><span class="section-header">languages</span></div>
+  <div class="line" data-delay="800"><span class="t">Python</span>  <span class="t">TypeScript</span>  <span class="t">Rust</span>  <span class="t">Go</span>  <span class="t">Solidity</span>  <span class="t">SQL</span>  <span class="t">Cypher</span>  <span class="t">Bash</span></div>
+  <div class="line" data-delay="950"><span class="sep">------------------------------------------------------------------------</span></div>
+  <div class="line" data-delay="1050"><span class="section-header">ai / ml</span></div>
+  <div class="line" data-delay="1150"><span class="t">PyTorch</span>  <span class="t">TensorFlow</span>  <span class="t">Transformers</span>  <span class="t">vLLM</span>  <span class="t">LangChain</span>  <span class="t">Ollama</span></div>
+  <div class="line" data-delay="1250"><span class="t">spaCy</span>  <span class="t">scikit-learn</span>  <span class="t">XGBoost</span>  <span class="t">OpenCV</span>  <span class="t">SHAP</span>  <span class="t">Numba</span></div>
+  <div class="line" data-delay="1350"><span class="t">Anthropic SDK</span>  <span class="t">OpenAI SDK</span>  <span class="t">FastMCP</span>  <span class="t">Pydantic</span>  <span class="t">MLflow</span></div>
+  <div class="line" data-delay="1450"><span class="sep">------------------------------------------------------------------------</span></div>
+  <div class="line" data-delay="1550"><span class="section-header">data</span></div>
+  <div class="line" data-delay="1650"><span class="t">Postgres</span>  <span class="t">OpenSearch</span>  <span class="t">Neo4j</span>  <span class="t">Redis</span>  <span class="t">SQLite</span>  <span class="t">InfluxDB</span></div>
+  <div class="line" data-delay="1750"><span class="t">NumPy</span>  <span class="t">Pandas</span>  <span class="t">SciPy</span>  <span class="t">GeoPandas</span>  <span class="t">Dask</span>  <span class="t">PyArrow</span></div>
+  <div class="line" data-delay="1850"><span class="sep">------------------------------------------------------------------------</span></div>
+  <div class="line" data-delay="1950"><span class="section-header">web</span></div>
+  <div class="line" data-delay="2050"><span class="t">React</span>  <span class="t">Three.js</span>  <span class="t">Vite</span>  <span class="t">Tailwind</span>  <span class="t">Zustand</span>  <span class="t">Pixi.js</span></div>
+  <div class="line" data-delay="2150"><span class="t">FastAPI</span>  <span class="t">Express</span>  <span class="t">Flask</span>  <span class="t">Socket.io</span>  <span class="t">Uvicorn</span></div>
+  <div class="line" data-delay="2250"><span class="sep">------------------------------------------------------------------------</span></div>
+  <div class="line" data-delay="2350"><span class="section-header">crypto</span></div>
+  <div class="line" data-delay="2450"><span class="t">Solana</span>  <span class="t">Anchor</span>  <span class="t">Web3.py</span>  <span class="t">Ethers.js</span>  <span class="t">Hardhat</span></div>
+  <div class="line" data-delay="2550"><span class="t">ed25519-dalek</span>  <span class="t">curve25519</span>  <span class="t">blake3</span>  <span class="t">bulletproofs</span>  <span class="t">BIP39</span></div>
+  <div class="line" data-delay="2650"><span class="t">ChaCha20-Poly1305</span>  <span class="t">LibP2P</span>  <span class="t">IPFS</span>  <span class="t">Sled</span></div>
+  <div class="line" data-delay="2750"><span class="sep">------------------------------------------------------------------------</span></div>
+  <div class="line" data-delay="2850"><span class="section-header">infra</span></div>
+  <div class="line" data-delay="2950"><span class="t">K8s</span>  <span class="t">EKS</span>  <span class="t">Helm</span>  <span class="t">Docker</span>  <span class="t">Temporal</span>  <span class="t">Flux CD</span></div>
+  <div class="line" data-delay="3050"><span class="t">AWS</span>  <span class="t">Cloudflare</span>  <span class="t">Fly.io</span>  <span class="t">Vercel</span>  <span class="t">GitHub Actions</span></div>
+  <div class="line" data-delay="3150"><span class="sep">------------------------------------------------------------------------</span></div>
+  <div class="line" data-delay="3250"><span class="section-header">quality</span></div>
+  <div class="line" data-delay="3350"><span class="t">ruff</span>  <span class="t">mypy</span>  <span class="t">basedpyright</span>  <span class="t">bandit</span>  <span class="t">semgrep</span>  <span class="t">vulture</span>  <span class="t">pip-audit</span></div>
+  <div class="line" data-delay="3450"><span class="sep">------------------------------------------------------------------------</span></div>
+  <div class="line" data-delay="3550"><span class="section-header">domains</span></div>
+  <div class="line" data-delay="3650"><span class="f">agentic systems</span>  <span class="f">RAG pipelines</span>  <span class="f">knowledge graphs</span></div>
+  <div class="line" data-delay="3750"><span class="f">entity resolution</span>  <span class="f">adversarial discovery</span>  <span class="f">eval frameworks</span></div>
+  <div class="line" data-delay="3850"><span class="f">trading bots</span>  <span class="f">DeFi / flash loans</span>  <span class="f">token launches</span></div>
+  <div class="line" data-delay="3950"><span class="f">elliptic curve crypto</span>  <span class="f">zero-knowledge proofs</span>  <span class="f">P2P networks</span></div>
+  <div class="line" data-delay="4050"><span class="f">GIS / terrain analysis</span>  <span class="f">CO2 modeling</span>  <span class="f">fraud detection</span></div>
+  <div class="line" data-delay="4150"><span class="f">information geometry</span>  <span class="f">statistical physics</span>  <span class="f">game dev</span></div>
+  <div class="line" data-delay="4250"><span class="sep">------------------------------------------------------------------------</span></div>
+  <div class="line" data-delay="4350"><span class="v">1,600</span><span class="d"> contributions</span>    <span class="v">70K+</span><span class="d"> lines</span>    <span class="v">30+</span><span class="d"> projects</span>    <span class="v">8</span><span class="d"> languages</span></div>
+  <div class="line" data-delay="4500"><span class="t">f3d1</span> <span class="d">&</span> <span class="t">Claude</span>  <span class="d">|</span>  <span class="v">~500M</span><span class="d"> tokens</span>  <span class="d">|</span>  <span class="d">building</span> <span class="t">@llmkit</span></div>
+  <div class="line" data-delay="4700"></div>
+  <div class="line" data-delay="4900"><span class="p">f3d1</span> <span class="d">~</span> <span class="p">much more brewing.</span> <span class="cursor"></span></div>
+</div>
+
+<script>
+const term = document.getElementById('term');
+const lines = document.querySelectorAll('.line');
+const scanlines = document.getElementById('scanlines');
+const flash = document.getElementById('flash');
+const final = document.getElementById('final');
+
+// Phase 1: type out lines with tech pop effect
+lines.forEach(line => {
+  const delay = parseInt(line.dataset.delay);
+  setTimeout(() => line.classList.add('visible'), delay);
+});
+
+const lastDelay = 4900;
+const holdTime = 2500;
+
+// Phase 3: DECOMPOSE
+setTimeout(() => {
+  // CRT flash
+  flash.classList.add('active');
+  scanlines.classList.add('active');
+
+  // Spawn horizontal glitch bars
+  for (let i = 0; i < 8; i++) {
+    const bar = document.createElement('div');
+    bar.className = 'glitch-bar';
+    bar.style.top = (Math.random() * 100) + '%';
+    bar.style.background = ['rgba(126,230,135,0.3)','rgba(255,166,87,0.3)','rgba(121,192,255,0.3)'][Math.floor(Math.random()*3)];
+    term.appendChild(bar);
+    setTimeout(() => bar.classList.add('active'), i * 60);
+  }
+
+  // Spawn falling characters from each visible line
+  const allLines = [...lines].filter(l => l.classList.contains('visible'));
+  allLines.forEach((line, lineIdx) => {
+    const text = line.textContent;
+    const rect = line.getBoundingClientRect();
+    const termRect = term.getBoundingClientRect();
+
+    for (let i = 0; i < text.length; i++) {
+      if (text[i] === ' ' || text[i] === '-') continue;
+      if (Math.random() > 0.7) continue; // Only 70% of chars fall (less cluttered)
+      const ch = document.createElement('div');
+      ch.className = 'fall-char';
+      ch.textContent = Math.random() > 0.3 ? text[i] : '01'[Math.floor(Math.random()*2)]; // Some become binary
+      ch.style.left = (rect.left - termRect.left + i * 6.9) + 'px';
+      ch.style.top = (rect.top - termRect.top) + 'px';
+      ch.style.setProperty('--delay', (lineIdx * 0.04 + Math.random() * 0.2) + 's');
+      ch.style.setProperty('--duration', (1.5 + Math.random() * 2) + 's');
+      ch.style.setProperty('--fall-dist', (200 + Math.random() * 500) + 'px');
+      ch.style.setProperty('--rot', (Math.random() * 40 - 20) + 'deg');
+      ch.style.color = ['#7ee687','#ffa657','#79c0ff','#d2a8ff','#f47067'][Math.floor(Math.random()*5)];
+      ch.style.textShadow = `0 0 ${3+Math.random()*5}px currentColor`;
+      ch.style.opacity = '0';
+      ch.style.fontSize = (9 + Math.random() * 5) + 'px';
+      term.appendChild(ch);
+      setTimeout(() => ch.classList.add('active'), 10);
+    }
+
+    // Decompose the original line with stagger
+    setTimeout(() => line.classList.add('decompose'), lineIdx * 40);
+  });
+
+  // Phase 4: final message emerges
+  setTimeout(() => {
+    scanlines.classList.remove('active');
+    final.classList.add('visible');
+  }, 3000);
+
+}, lastDelay + holdTime);
+</script>
+</body>
+</html>
