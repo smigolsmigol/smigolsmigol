@@ -1,32 +1,128 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="60" viewBox="0 0 500 60">
-  <defs>
-    <filter id="glitch">
-      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="3" seed="1" result="noise">
-        <animate attributeName="seed" from="1" to="100" dur="0.5s" repeatCount="indefinite"/>
-      </feTurbulence>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <filter id="glitch2">
-      <feOffset in="SourceGraphic" dx="2" dy="0" result="r">
-        <animate attributeName="dx" values="0;3;-2;0;4;-1;0" dur="2s" repeatCount="indefinite"/>
-      </feOffset>
-      <feOffset in="SourceGraphic" dx="-2" dy="0" result="b">
-        <animate attributeName="dx" values="0;-3;2;0;-4;1;0" dur="2s" repeatCount="indefinite"/>
-      </feOffset>
-      <feColorMatrix in="r" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0" result="red"/>
-      <feColorMatrix in="b" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 0.6 0" result="blue"/>
-      <feBlend in="SourceGraphic" in2="red" mode="screen" result="blend1"/>
-      <feBlend in="blend1" in2="blue" mode="screen"/>
-    </filter>
-  </defs>
-  <rect width="500" height="60" fill="transparent"/>
-  <text x="250" y="42" text-anchor="middle" font-family="monospace" font-size="36" font-weight="bold" fill="#7ee687" filter="url(#glitch2)">f3d1__</text>
-  <rect y="28" width="500" height="2" fill="#0ff" opacity="0">
-    <animate attributeName="opacity" values="0;0;0.3;0;0;0;0.2;0" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="y" values="28;15;42;28;35;20;28" dur="3s" repeatCount="indefinite"/>
-  </rect>
-  <rect y="35" width="500" height="1" fill="#f0f" opacity="0">
-    <animate attributeName="opacity" values="0;0.2;0;0;0;0.3;0;0" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="y" values="35;22;40;35;18;38;35" dur="2.5s" repeatCount="indefinite"/>
-  </rect>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="80" viewBox="0 0 800 80">
+  <style>
+    @keyframes glitchClip1 {
+      0%, 100% { clip-path: inset(0 0 85% 0); }
+      10% { clip-path: inset(15% 0 65% 0); }
+      20% { clip-path: inset(60% 0 5% 0); }
+      30% { clip-path: inset(30% 0 40% 0); }
+      40% { clip-path: inset(80% 0 0% 0); }
+      50% { clip-path: inset(5% 0 75% 0); }
+      60% { clip-path: inset(45% 0 35% 0); }
+      70% { clip-path: inset(70% 0 10% 0); }
+      80% { clip-path: inset(20% 0 55% 0); }
+      90% { clip-path: inset(50% 0 25% 0); }
+    }
+    @keyframes glitchClip2 {
+      0%, 100% { clip-path: inset(65% 0 0% 0); }
+      10% { clip-path: inset(40% 0 30% 0); }
+      20% { clip-path: inset(0% 0 80% 0); }
+      30% { clip-path: inset(55% 0 15% 0); }
+      40% { clip-path: inset(10% 0 70% 0); }
+      50% { clip-path: inset(75% 0 5% 0); }
+      60% { clip-path: inset(25% 0 50% 0); }
+      70% { clip-path: inset(5% 0 60% 0); }
+      80% { clip-path: inset(50% 0 20% 0); }
+      90% { clip-path: inset(35% 0 40% 0); }
+    }
+    @keyframes glitchShift1 {
+      0%, 100% { transform: translate(0, 0); }
+      10% { transform: translate(-8px, 0); }
+      20% { transform: translate(5px, -2px); }
+      30% { transform: translate(-3px, 1px); }
+      40% { transform: translate(7px, 0); }
+      50% { transform: translate(-5px, -1px); }
+      60% { transform: translate(4px, 2px); }
+      70% { transform: translate(-6px, 0); }
+      80% { transform: translate(3px, -1px); }
+      90% { transform: translate(-4px, 1px); }
+    }
+    @keyframes glitchShift2 {
+      0%, 100% { transform: translate(0, 0); }
+      10% { transform: translate(6px, 1px); }
+      20% { transform: translate(-4px, 0); }
+      30% { transform: translate(8px, -1px); }
+      40% { transform: translate(-6px, 2px); }
+      50% { transform: translate(3px, 0); }
+      60% { transform: translate(-7px, -2px); }
+      70% { transform: translate(5px, 1px); }
+      80% { transform: translate(-3px, 0); }
+      90% { transform: translate(6px, -1px); }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-80px); opacity: 0; }
+      20% { opacity: 0.4; }
+      80% { opacity: 0.4; }
+      100% { transform: translateY(80px); opacity: 0; }
+    }
+    @keyframes flicker {
+      0%, 94%, 96%, 98%, 100% { opacity: 1; }
+      95% { opacity: 0.4; }
+      97% { opacity: 0.7; }
+      99% { opacity: 0.3; }
+    }
+    .main-text {
+      font-family: monospace;
+      font-size: 52px;
+      font-weight: 900;
+      fill: #7ee687;
+      animation: flicker 4s step-end infinite;
+    }
+    .glitch-r {
+      font-family: monospace;
+      font-size: 52px;
+      font-weight: 900;
+      fill: #0ff;
+      opacity: 0.6;
+      animation: glitchClip1 3s steps(1) infinite, glitchShift1 3s steps(1) infinite;
+    }
+    .glitch-b {
+      font-family: monospace;
+      font-size: 52px;
+      font-weight: 900;
+      fill: #f0f;
+      opacity: 0.5;
+      animation: glitchClip2 2.5s steps(1) infinite, glitchShift2 2.5s steps(1) infinite;
+    }
+    .scan {
+      animation: scanline 3s linear infinite;
+    }
+    .bar1 {
+      opacity: 0;
+      animation: barFlash1 4s step-end infinite;
+    }
+    .bar2 {
+      opacity: 0;
+      animation: barFlash2 3.5s step-end infinite;
+    }
+    @keyframes barFlash1 {
+      0%, 100% { opacity: 0; }
+      12% { opacity: 0.15; y: 15; }
+      13% { opacity: 0; }
+      45% { opacity: 0.2; y: 50; }
+      46% { opacity: 0; }
+      78% { opacity: 0.1; y: 30; }
+      79% { opacity: 0; }
+    }
+    @keyframes barFlash2 {
+      0%, 100% { opacity: 0; }
+      25% { opacity: 0.12; y: 45; }
+      26% { opacity: 0; }
+      60% { opacity: 0.18; y: 20; }
+      61% { opacity: 0; }
+      88% { opacity: 0.15; y: 55; }
+      89% { opacity: 0; }
+    }
+  </style>
+  <rect width="800" height="80" fill="transparent"/>
+  <!-- Main text -->
+  <text x="400" y="56" text-anchor="middle" class="main-text">f3d1__</text>
+  <!-- Cyan glitch layer -->
+  <text x="400" y="56" text-anchor="middle" class="glitch-r">f3d1__</text>
+  <!-- Magenta glitch layer -->
+  <text x="400" y="56" text-anchor="middle" class="glitch-b">f3d1__</text>
+  <!-- Scanline -->
+  <rect x="0" y="0" width="800" height="2" fill="#7ee687" opacity="0.3" class="scan"/>
+  <!-- Random glitch bars -->
+  <rect x="0" y="15" width="800" height="4" fill="#0ff" class="bar1"/>
+  <rect x="100" y="45" width="600" height="3" fill="#f0f" class="bar2"/>
 </svg>
