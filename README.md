@@ -1,8 +1,4 @@
 <!-- -->
-<p align="center">
-  <img src="glitch_header.svg" alt="f3d1" width="400" />
-</p>
-
 <img src="stack.gif" alt="f3d1 stack" width="100%" />
 
 <picture>
