@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="60" viewBox="0 0 500 60">
+  <defs>
+    <filter id="glitch">
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="3" seed="1" result="noise">
+        <animate attributeName="seed" from="1" to="100" dur="0.5s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="glitch2">
+      <feOffset in="SourceGraphic" dx="2" dy="0" result="r">
+        <animate attributeName="dx" values="0;3;-2;0;4;-1;0" dur="2s" repeatCount="indefinite"/>
+      </feOffset>
+      <feOffset in="SourceGraphic" dx="-2" dy="0" result="b">
+        <animate attributeName="dx" values="0;-3;2;0;-4;1;0" dur="2s" repeatCount="indefinite"/>
+      </feOffset>
+      <feColorMatrix in="r" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0" result="red"/>
+      <feColorMatrix in="b" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 0.6 0" result="blue"/>
+      <feBlend in="SourceGraphic" in2="red" mode="screen" result="blend1"/>
+      <feBlend in="blend1" in2="blue" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="500" height="60" fill="transparent"/>
+  <text x="250" y="42" text-anchor="middle" font-family="monospace" font-size="36" font-weight="bold" fill="#7ee687" filter="url(#glitch2)">f3d1__</text>
+  <rect y="28" width="500" height="2" fill="#0ff" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.3;0;0;0;0.2;0" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="28;15;42;28;35;20;28" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <rect y="35" width="500" height="1" fill="#f0f" opacity="0">
+    <animate attributeName="opacity" values="0;0.2;0;0;0;0.3;0;0" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="35;22;40;35;18;38;35" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+</svg>

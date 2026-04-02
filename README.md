@@ -1,6 +1,6 @@
 <!-- -->
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=7EE687&background=1A203000&center=true&vCenter=true&width=500&lines=f3d1;physics+->+agentic+systems;much+more+brewing." alt="Typing SVG" /></a>
+  <img src="glitch_header.svg" alt="f3d1" width="400" />
 </p>
 
 <img src="stack.gif" alt="f3d1 stack" width="100%" />
