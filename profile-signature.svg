@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
+  <title id="title">Federico Benini - AI Systems and Platform Engineer</title>
+  <desc id="desc">An engineering profile about turning model calls into observable, replayable, and bounded software systems.</desc>
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1017"/>
+      <stop offset=".58" stop-color="#080c12"/>
+      <stop offset="1" stop-color="#04070b"/>
+    </linearGradient>
+    <radialGradient id="identityAura" cx=".08" cy=".48" r=".78">
+      <stop offset="0" stop-color="#ff2f7d" stop-opacity=".09"/>
+      <stop offset=".48" stop-color="#ff2f7d" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#ff2f7d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="systemsAura" cx=".82" cy=".45" r=".7">
+      <stop offset="0" stop-color="#62d8f7" stop-opacity=".065"/>
+      <stop offset=".55" stop-color="#62d8f7" stop-opacity=".014"/>
+      <stop offset="1" stop-color="#62d8f7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff2f7d" stop-opacity=".8"/>
+      <stop offset=".48" stop-color="#8a77c9" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#62d8f7" stop-opacity=".85"/>
+    </linearGradient>
+    <linearGradient id="nameInk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#eee6ed"/>
+      <stop offset=".48" stop-color="#d8dce5"/>
+      <stop offset="1" stop-color="#9eb8c7"/>
+    </linearGradient>
+    <linearGradient id="scanner" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#62d8f7" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#62d8f7" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#62d8f7" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#91a1b7" stroke-opacity=".055"/>
+    </pattern>
+    <filter id="softGlow" x="-250%" y="-250%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="signalGlitch" x="-8%" y="-16%" width="116%" height="132%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".018 .24" numOctaves="1" seed="13" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="9" xChannelSelector="R" yChannelSelector="A" result="warped"/>
+      <feFlood flood-color="#62d8f7" flood-opacity=".28" result="cyanColor"/>
+      <feComposite in="cyanColor" in2="warped" operator="in" result="cyan"/>
+      <feOffset in="cyan" dx="-3" result="cyanShift"/>
+      <feFlood flood-color="#ff2f7d" flood-opacity=".28" result="magentaColor"/>
+      <feComposite in="magentaColor" in2="warped" operator="in" result="magenta"/>
+      <feOffset in="magenta" dx="3" result="magentaShift"/>
+      <feMerge><feMergeNode in="cyanShift"/><feMergeNode in="magentaShift"/><feMergeNode in="warped"/></feMerge>
+    </filter>
+    <clipPath id="panelClip"><rect x="1" y="1" width="1198" height="408" rx="16"/></clipPath>
+    <clipPath id="scanClip"><rect x="682" y="76" width="470" height="252"/></clipPath>
+    <style>
+      .sans { font-family: "Segoe UI", Arial, sans-serif; }
+      .mono { font-family: Consolas, "Liberation Mono", monospace; }
+      .meta { fill: #7d8999; font-size: 9px; font-weight: 600; letter-spacing: 1.25px; }
+      .faint { fill: #536071; }
+      .rule { stroke: #222b37; stroke-width: 1; }
+      .node { fill: #0b1118; stroke: #354252; stroke-width: 1; }
+      .node-label { fill: #aeb7c5; font-size: 9px; font-weight: 700; letter-spacing: .8px; }
+      .node-sub { fill: #5f6b7a; font-size: 8px; letter-spacing: .35px; }
+      .cursor { animation: blink 1.35s steps(1) infinite; }
+      .sweep { animation: sweep 9s ease-in-out infinite; }
+      .pulse { animation: pulse 2.8s ease-in-out infinite; transform-origin: center; }
+      .desktop-content { animation: signal-drift 18s linear infinite; }
+      .signal-noise { opacity: 0; animation: signal-noise 18s linear infinite; }
+      .mobile-content { display: none; }
+      @keyframes blink { 0%, 58% { opacity: 1; } 59%, 100% { opacity: .22; } }
+      @keyframes pulse { 0%, 100% { opacity: .38; } 50% { opacity: 1; } }
+      @keyframes sweep {
+        0%, 8% { opacity: 0; transform: translateX(0); }
+        18% { opacity: .22; }
+        52% { opacity: .12; transform: translateX(430px); }
+        58%, 100% { opacity: 0; transform: translateX(430px); }
+      }
+      @keyframes signal-drift {
+        0%, 82%, 94%, 100% { opacity: 1; transform: translateX(0); filter: none; }
+        83% { opacity: .96; transform: translateX(-1px); filter: url(#signalGlitch); }
+        84.5% { opacity: .72; transform: translateX(2px); filter: url(#signalGlitch); }
+        86% { opacity: .18; transform: translateX(-2px); filter: url(#signalGlitch); }
+        87.5% { opacity: .02; transform: translateX(1px); filter: url(#signalGlitch); }
+        89% { opacity: .35; transform: translateX(-1px); filter: url(#signalGlitch); }
+        91% { opacity: .82; transform: translateX(1px); filter: url(#signalGlitch); }
+        93% { opacity: 1; transform: translateX(0); filter: none; }
+      }
+      @keyframes signal-noise {
+        0%, 82%, 94%, 100% { opacity: 0; transform: translateX(0); }
+        83% { opacity: .22; transform: translateX(-3px); }
+        84.5% { opacity: .58; transform: translateX(4px); }
+        86%, 87.5% { opacity: .86; transform: translateX(-2px); }
+        89% { opacity: .46; transform: translateX(2px); }
+        91% { opacity: .18; transform: translateX(-1px); }
+        93% { opacity: 0; transform: translateX(0); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .cursor, .sweep, .pulse, .desktop-content, .signal-noise { animation: none; }
+        .desktop-content { filter: none; opacity: 1; transform: none; }
+        .signal-noise, .sweep { display: none; }
+      }
+      @media (max-width: 600px) {
+        .desktop-content, .signal-noise, .sweep { display: none; }
+        .mobile-content { display: inline; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#panelClip)">
+    <rect width="1200" height="410" fill="url(#surface)"/>
+    <rect width="650" height="356" fill="url(#identityAura)"/>
+    <rect x="570" width="630" height="356" fill="url(#systemsAura)"/>
+    <rect width="1200" height="356" fill="url(#grid)"/>
+    <rect y="54" width="1200" height="1" fill="#202834"/>
+    <rect y="356" width="1200" height="1" fill="#202834"/>
+    <rect x="0" y="83" width="2" height="83" fill="#ff2f7d" opacity=".72"/>
+    <g fill="none" stroke="#718196" stroke-opacity=".38">
+      <path d="M16 78V66h12 M1172 66h12v12 M16 332v12h12 M1172 344h12v-12"/>
+    </g>
+
+    <g class="desktop-content">
+      <g class="mono">
+        <text x="28" y="34" fill="#ff2f7d" font-size="17" font-weight="700" letter-spacing="-1">f3d1<tspan class="cursor">__</tspan></text>
+        <text x="112" y="33" class="meta faint">GITHUB / SMIGOLSMIGOL / README.MD</text>
+        <circle cx="972" cy="29" r="3" fill="#a4e77c" filter="url(#softGlow)"/>
+        <text x="988" y="33" class="meta">PYTHON / RUST / TYPESCRIPT</text>
+      </g>
+
+      <g transform="translate(46 93)">
+        <g class="mono meta">
+          <text x="0" y="0" fill="#ff2f7d">01</text>
+          <text x="36" y="0">ENGINEERING PROFILE</text>
+        </g>
+
+        <text x="0" y="78" class="sans" fill="url(#nameInk)" font-size="43" font-weight="650" letter-spacing="-2.1">Federico Benini</text>
+        <text x="0" y="118" class="mono" fill="#62d8f7" font-size="12.5" font-weight="700" letter-spacing="1.15">AI SYSTEMS &amp; PLATFORM ENGINEER</text>
+
+        <text x="0" y="171" class="sans" fill="#909baa" font-size="15">I work where model calls become software:</text>
+        <text x="0" y="197" class="sans" fill="#d7dce4" font-size="15" font-weight="600">runtime, evaluation, observability, and failure control.</text>
+
+        <line x1="0" y1="234" x2="482" y2="234" class="rule"/>
+        <text x="0" y="256" class="mono meta">PRODUCTION AI</text>
+        <text x="123" y="256" class="mono meta">SDK &amp; RUNTIME</text>
+        <text x="263" y="256" class="mono meta">EVALUATION</text>
+        <text x="375" y="256" class="mono meta">INFRASTRUCTURE</text>
+      </g>
+
+      <g transform="translate(680 88)">
+        <line x1="0" y1="0" x2="472" y2="0" stroke="#354151"/>
+        <text x="0" y="20" class="mono meta" fill="#aeb6c3">FROM MODEL CALL TO OPERABLE SYSTEM</text>
+        <text x="472" y="20" class="mono meta faint" text-anchor="end">SYSTEM CONTRACT</text>
+
+        <g transform="translate(0 49)">
+          <line x1="38" y1="28" x2="434" y2="28" stroke="#303b49"/>
+          <line x1="38" y1="128" x2="434" y2="128" stroke="url(#route)" stroke-opacity=".72"/>
+          <path d="M170 28V78H38V128 M302 28V78H434V128" fill="none" stroke="#293544"/>
+          <circle cx="38" cy="28" r="4" fill="#718196"/>
+          <circle cx="170" cy="28" r="5" fill="#62d8f7"/>
+          <circle cx="302" cy="28" r="4" fill="#718196"/>
+          <circle cx="434" cy="28" r="4" fill="#718196"/>
+          <circle cx="38" cy="128" r="5" fill="#ff2f7d"/>
+          <circle cx="170" cy="128" r="5" fill="#a06fb7"/>
+          <circle cx="302" cy="128" r="5" fill="#7e8bcf"/>
+          <circle class="pulse" cx="434" cy="128" r="6" fill="#62d8f7" filter="url(#softGlow)"/>
+
+          <g class="mono" text-anchor="middle">
+            <text x="38" y="53" class="node-label">CONTEXT</text>
+            <text x="170" y="53" class="node-label">MODEL</text>
+            <text x="302" y="53" class="node-label">TOOLS</text>
+            <text x="434" y="53" class="node-label">OUTPUT</text>
+            <text x="38" y="155" class="node-label">TRACE</text>
+            <text x="170" y="155" class="node-label">REPLAY</text>
+            <text x="302" y="155" class="node-label">EVALUATE</text>
+            <text x="434" y="155" class="node-label" fill="#c4eff9">BOUNDARY</text>
+          </g>
+
+          <g class="mono" text-anchor="middle">
+            <text x="38" y="70" class="node-sub">state</text>
+            <text x="170" y="70" class="node-sub">inference</text>
+            <text x="302" y="70" class="node-sub">effects</text>
+            <text x="434" y="70" class="node-sub">behavior</text>
+            <text x="38" y="173" class="node-sub">observe</text>
+            <text x="170" y="173" class="node-sub">reproduce</text>
+            <text x="302" y="173" class="node-sub">measure</text>
+            <text x="434" y="173" class="node-sub">enforce</text>
+          </g>
+
+          <line x1="0" y1="202" x2="472" y2="202" class="rule"/>
+          <text x="0" y="228" class="mono" fill="#d1d6df" font-size="11" font-weight="700" letter-spacing="1">FAILURE MUST LEAVE EVIDENCE.</text>
+          <text x="472" y="228" class="mono meta faint" text-anchor="end">REPLAYABLE / MEASURABLE / BOUNDED</text>
+        </g>
+      </g>
+
+      <g class="mono" transform="translate(28 386)">
+        <text y="0" class="meta">TRACE THE FAILURE</text>
+        <rect x="122" y="-4" width="52" height="1" fill="#344050"/>
+        <rect x="122" y="-4" width="28" height="1" fill="#ff2f7d"/>
+        <text x="188" y="0" class="meta">MAKE IT REPLAYABLE</text>
+        <rect x="344" y="-4" width="52" height="1" fill="#344050"/>
+        <rect x="344" y="-4" width="35" height="1" fill="#8a77c9"/>
+        <text x="410" y="0" class="meta">ENFORCE THE BOUNDARY</text>
+        <text x="939" y="0" class="meta faint">TRENTO / CET</text>
+        <text x="1140" y="0" class="meta faint" text-anchor="end">46.07&#176;N 11.12&#176;E</text>
+      </g>
+    </g>
+
+    <g clip-path="url(#scanClip)" aria-hidden="true">
+      <rect class="sweep" x="682" y="77" width="42" height="250" fill="url(#scanner)" opacity="0"/>
+    </g>
+
+    <g class="signal-noise" clip-path="url(#panelClip)" aria-hidden="true">
+      <rect x="0" y="111" width="1200" height="2" fill="#62d8f7" opacity=".46"/>
+      <rect x="0" y="114" width="1200" height="1" fill="#ff2f7d" opacity=".62"/>
+      <rect x="121" y="226" width="852" height="3" fill="#ff2f7d" opacity=".34"/>
+      <rect x="492" y="315" width="708" height="2" fill="#62d8f7" opacity=".4"/>
+      <text x="1010" y="338" class="mono meta" fill="#62d8f7">SIGNAL / RECONSTRUCTING</text>
+    </g>
+
+    <g class="mobile-content">
+      <text x="48" y="72" class="mono" fill="#ff2f7d" font-size="40" font-weight="700" letter-spacing="-2">f3d1<tspan class="cursor">__</tspan></text>
+      <text x="48" y="123" class="mono" fill="#7d8999" font-size="23" font-weight="600" letter-spacing="3">ENGINEERING PROFILE</text>
+      <text x="48" y="215" class="sans" fill="#eceef3" font-size="64" font-weight="650" letter-spacing="-3.2">Federico <tspan fill="#aeb6c3">Benini</tspan></text>
+      <text x="48" y="281" class="mono" fill="#62d8f7" font-size="30" font-weight="700" letter-spacing="1.5">AI SYSTEMS &amp; PLATFORM ENGINEER</text>
+      <text x="48" y="332" class="sans" fill="#aeb6c3" font-size="25">Model calls into observable, replayable, bounded software.</text>
+      <text x="48" y="382" class="mono" fill="#7d8999" font-size="20" font-weight="600" letter-spacing="1.6">RUNTIME / EVALUATION / OBSERVABILITY / CONTROL</text>
+    </g>
+  </g>
+
+  <rect x=".5" y=".5" width="1199" height="409" rx="16" fill="none" stroke="#283241"/>
+</svg>
