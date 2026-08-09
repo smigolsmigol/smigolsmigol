@@ -1,0 +1,51 @@
+name: Refresh contribution trace
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-trace
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the profile source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Verify the renderer
+        run: python3 -m unittest discover -s tests -p "test_*.py"
+
+      - name: Render the current contribution trace
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/contribution_trace.py --output-dir dist
+
+      - name: Publish changed SVGs to the output branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin output
+          publish_dir="$(mktemp -d)"
+          git worktree add --detach "$publish_dir" origin/output
+          git -C "$publish_dir" switch -C output
+
+          rm -f "$publish_dir/github-snake.svg" "$publish_dir/github-snake-dark.svg"
+          install -m 0644 dist/contribution-trace-dark.svg "$publish_dir/contribution-trace-dark.svg"
+          install -m 0644 dist/contribution-trace-light.svg "$publish_dir/contribution-trace-light.svg"
+
+          git -C "$publish_dir" config user.name "github-actions[bot]"
+          git -C "$publish_dir" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$publish_dir" add -A
+          if git -C "$publish_dir" diff --cached --quiet; then
+            exit 0
+          fi
+          git -C "$publish_dir" commit -m "Refresh contribution trace"
+          git -C "$publish_dir" push origin output
