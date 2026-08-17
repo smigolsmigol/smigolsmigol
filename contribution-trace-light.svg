@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
-  <title id="title">smigolsmigol contribution trace: 4044 contributions across 164 active days</title>
-  <desc id="desc">A source-bound replay of the GitHub contribution calendar from 2025-08-17 through 2026-08-16.</desc>
-  <metadata>source=github-graphql; snapshot=b5ca4c4d29; generated=2026-08-16</metadata>
+  <title id="title">smigolsmigol contribution trace: 4100 contributions across 165 active days</title>
+  <desc id="desc">A source-bound replay of the GitHub contribution calendar from 2025-08-17 through 2026-08-17.</desc>
+  <metadata>source=github-graphql; snapshot=2481f0dda7; generated=2026-08-17</metadata>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
@@ -58,7 +58,7 @@
       <text x="105" y="34" class="meta">ACTIVITY TRACE / ROLLING YEAR</text>
       <circle cx="802" cy="30" r="3" fill="#3b7d2b" filter="url(#glow)"/>
       <text x="816" y="34" class="meta">SOURCE GITHUB GRAPHQL</text>
-      <text x="1168" y="34" class="meta" text-anchor="end">SNAPSHOT B5CA4C4D29</text>
+      <text x="1168" y="34" class="meta" text-anchor="end">SNAPSHOT 2481F0DDA7</text>
     </g>
 
     <g aria-label="GitHub contribution calendar">
@@ -265,12 +265,12 @@
       <g><title>2026-03-05: 0 contributions</title><rect class="cell" x="412" y="148" width="9" height="9" rx="2" fill="#edf1f5" style="animation-delay:-2.21s"/></g>
       <g><title>2026-03-06: 20 contributions</title><rect class="cell" x="412" y="161" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-2.38s"/></g>
       <g><title>2026-03-07: 78 contributions</title><rect class="cell" x="412" y="174" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-2.55s"/></g>
-      <g><title>2026-03-08: 79 contributions</title><rect class="cell" x="425" y="96" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-2.72s"/></g>
+      <g><title>2026-03-08: 79 contributions</title><rect class="cell" x="425" y="96" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-2.72s"/></g>
       <g><title>2026-03-09: 27 contributions</title><rect class="cell" x="425" y="109" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.00s"/></g>
-      <g><title>2026-03-10: 40 contributions</title><rect class="cell" x="425" y="122" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.17s"/></g>
+      <g><title>2026-03-10: 40 contributions</title><rect class="cell" x="425" y="122" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.17s"/></g>
       <g><title>2026-03-11: 2 contributions</title><rect class="cell" x="425" y="135" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.34s"/></g>
       <g><title>2026-03-12: 9 contributions</title><rect class="cell" x="425" y="148" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.51s"/></g>
-      <g><title>2026-03-13: 43 contributions</title><rect class="cell" x="425" y="161" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.68s"/></g>
+      <g><title>2026-03-13: 43 contributions</title><rect class="cell" x="425" y="161" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.68s"/></g>
       <g><title>2026-03-14: 31 contributions</title><rect class="cell" x="425" y="174" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.85s"/></g>
       <g><title>2026-03-15: 22 contributions</title><rect class="cell" x="438" y="96" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.02s"/></g>
       <g><title>2026-03-16: 2 contributions</title><rect class="cell" x="438" y="109" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.19s"/></g>
@@ -282,10 +282,10 @@
       <g><title>2026-03-22: 60 contributions</title><rect class="cell" x="451" y="96" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-2.21s"/></g>
       <g><title>2026-03-23: 12 contributions</title><rect class="cell" x="451" y="109" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-2.38s"/></g>
       <g><title>2026-03-24: 33 contributions</title><rect class="cell" x="451" y="122" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-2.55s"/></g>
-      <g><title>2026-03-25: 84 contributions</title><rect class="cell" x="451" y="135" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-2.72s"/></g>
+      <g><title>2026-03-25: 84 contributions</title><rect class="cell" x="451" y="135" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-2.72s"/></g>
       <g><title>2026-03-26: 15 contributions</title><rect class="cell" x="451" y="148" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.00s"/></g>
-      <g><title>2026-03-27: 120 contributions</title><rect class="cell hot" x="451" y="161" width="9" height="9" rx="2" fill="#ca155c" style="animation-delay:-0.17s"/></g>
-      <g><title>2026-03-28: 83 contributions</title><rect class="cell" x="451" y="174" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-0.34s"/></g>
+      <g><title>2026-03-27: 120 contributions</title><rect class="cell" x="451" y="161" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-0.17s"/></g>
+      <g><title>2026-03-28: 83 contributions</title><rect class="cell" x="451" y="174" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.34s"/></g>
       <g><title>2026-03-29: 104 contributions</title><rect class="cell" x="464" y="96" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-0.51s"/></g>
       <g><title>2026-03-30: 54 contributions</title><rect class="cell" x="464" y="109" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.68s"/></g>
       <g><title>2026-03-31: 15 contributions</title><rect class="cell" x="464" y="122" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.85s"/></g>
@@ -309,17 +309,17 @@
       <g><title>2026-04-18: 36 contributions</title><rect class="cell" x="490" y="174" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.02s"/></g>
       <g><title>2026-04-19: 21 contributions</title><rect class="cell" x="503" y="96" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.19s"/></g>
       <g><title>2026-04-20: 24 contributions</title><rect class="cell" x="503" y="109" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.36s"/></g>
-      <g><title>2026-04-21: 44 contributions</title><rect class="cell" x="503" y="122" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-1.53s"/></g>
+      <g><title>2026-04-21: 44 contributions</title><rect class="cell" x="503" y="122" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.53s"/></g>
       <g><title>2026-04-22: 21 contributions</title><rect class="cell" x="503" y="135" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.70s"/></g>
       <g><title>2026-04-23: 36 contributions</title><rect class="cell" x="503" y="148" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.87s"/></g>
       <g><title>2026-04-24: 33 contributions</title><rect class="cell" x="503" y="161" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-2.04s"/></g>
       <g><title>2026-04-25: 8 contributions</title><rect class="cell" x="503" y="174" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-2.21s"/></g>
       <g><title>2026-04-26: 58 contributions</title><rect class="cell" x="516" y="96" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-2.38s"/></g>
-      <g><title>2026-04-27: 85 contributions</title><rect class="cell" x="516" y="109" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-2.55s"/></g>
-      <g><title>2026-04-28: 120 contributions</title><rect class="cell hot" x="516" y="122" width="9" height="9" rx="2" fill="#ca155c" style="animation-delay:-2.72s"/></g>
+      <g><title>2026-04-27: 85 contributions</title><rect class="cell" x="516" y="109" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-2.55s"/></g>
+      <g><title>2026-04-28: 120 contributions</title><rect class="cell" x="516" y="122" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-2.72s"/></g>
       <g><title>2026-04-29: 2 contributions</title><rect class="cell" x="516" y="135" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.00s"/></g>
       <g><title>2026-04-30: 52 contributions</title><rect class="cell" x="516" y="148" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.17s"/></g>
-      <g><title>2026-05-01: 44 contributions</title><rect class="cell" x="516" y="161" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.34s"/></g>
+      <g><title>2026-05-01: 44 contributions</title><rect class="cell" x="516" y="161" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.34s"/></g>
       <g><title>2026-05-02: 13 contributions</title><rect class="cell" x="516" y="174" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.51s"/></g>
       <g><title>2026-05-03: 2 contributions</title><rect class="cell" x="529" y="96" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.68s"/></g>
       <g><title>2026-05-04: 6 contributions</title><rect class="cell" x="529" y="109" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.85s"/></g>
@@ -408,7 +408,7 @@
       <g><title>2026-07-26: 11 contributions</title><rect class="cell" x="685" y="96" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.51s"/></g>
       <g><title>2026-07-27: 39 contributions</title><rect class="cell" x="685" y="109" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.68s"/></g>
       <g><title>2026-07-28: 11 contributions</title><rect class="cell" x="685" y="122" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.85s"/></g>
-      <g><title>2026-07-29: 29 contributions</title><rect class="cell" x="685" y="135" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.02s"/></g>
+      <g><title>2026-07-29: 32 contributions</title><rect class="cell" x="685" y="135" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.02s"/></g>
       <g><title>2026-07-30: 68 contributions</title><rect class="cell" x="685" y="148" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-1.19s"/></g>
       <g><title>2026-07-31: 72 contributions</title><rect class="cell" x="685" y="161" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-1.36s"/></g>
       <g><title>2026-08-01: 7 contributions</title><rect class="cell" x="685" y="174" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.53s"/></g>
@@ -420,13 +420,14 @@
       <g><title>2026-08-07: 0 contributions</title><rect class="cell" x="698" y="161" width="9" height="9" rx="2" fill="#edf1f5" style="animation-delay:-2.55s"/></g>
       <g><title>2026-08-08: 0 contributions</title><rect class="cell" x="698" y="174" width="9" height="9" rx="2" fill="#edf1f5" style="animation-delay:-2.72s"/></g>
       <g><title>2026-08-09: 9 contributions</title><rect class="cell" x="711" y="96" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-0.00s"/></g>
-      <g><title>2026-08-10: 156 contributions</title><rect class="cell hot" x="711" y="109" width="9" height="9" rx="2" fill="#ca155c" style="animation-delay:-0.17s"/></g>
-      <g><title>2026-08-11: 82 contributions</title><rect class="cell" x="711" y="122" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-0.34s"/></g>
-      <g><title>2026-08-12: 73 contributions</title><rect class="cell" x="711" y="135" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.51s"/></g>
-      <g><title>2026-08-13: 69 contributions</title><rect class="cell" x="711" y="148" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.68s"/></g>
-      <g><title>2026-08-14: 44 contributions</title><rect class="cell" x="711" y="161" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.85s"/></g>
-      <g><title>2026-08-15: 16 contributions</title><rect class="cell" x="711" y="174" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.02s"/></g>
-      <g><title>2026-08-16: 21 contributions</title><rect class="cell" x="724" y="96" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.19s"/></g>
+      <g><title>2026-08-10: 178 contributions</title><rect class="cell hot" x="711" y="109" width="9" height="9" rx="2" fill="#ca155c" style="animation-delay:-0.17s"/></g>
+      <g><title>2026-08-11: 82 contributions</title><rect class="cell" x="711" y="122" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.34s"/></g>
+      <g><title>2026-08-12: 76 contributions</title><rect class="cell" x="711" y="135" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.51s"/></g>
+      <g><title>2026-08-13: 73 contributions</title><rect class="cell" x="711" y="148" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.68s"/></g>
+      <g><title>2026-08-14: 47 contributions</title><rect class="cell" x="711" y="161" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.85s"/></g>
+      <g><title>2026-08-15: 21 contributions</title><rect class="cell" x="711" y="174" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.02s"/></g>
+      <g><title>2026-08-16: 30 contributions</title><rect class="cell" x="724" y="96" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.19s"/></g>
+      <g><title>2026-08-17: 7 contributions</title><rect class="cell" x="724" y="109" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.36s"/></g>
       <use href="#activity-route" fill="none" stroke="#087f9c" stroke-opacity=".16" stroke-width="7" stroke-linecap="round"/>
       <use class="trace-flow" href="#activity-route" fill="none" stroke="url(#signal)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 11"/>
       <g class="crawler" aria-hidden="true">
@@ -443,21 +444,21 @@
       <circle cx="303" cy="216" r="2" fill="#ca155c"/>
       <circle cx="496" cy="216" r="2" fill="#8a77c9"/>
       <circle cx="690" cy="216" r="2" fill="#087f9c"/>
-      <text x="738" y="220" class="meta" text-anchor="end">2026.08.16</text>
+      <text x="738" y="220" class="meta" text-anchor="end">2026.08.17</text>
       <text x="48" y="249" fill="#17202c" font-size="11" font-weight="700" letter-spacing="1">OBSERVED ACTIVITY / REPLAYED DAILY</text>
-      <text x="738" y="249" class="meta" text-anchor="end">33 WEEKLY CHECKPOINTS / 04 PEAK DAYS</text>
+      <text x="738" y="249" class="meta" text-anchor="end">33 WEEKLY CHECKPOINTS / 02 PEAK DAYS</text>
     </g>
 
     <g transform="translate(814 80)">
       <text class="mono meta" fill="#087f9c">SOURCE-BOUND SIGNAL</text>
-      <text y="60" class="sans" fill="#17202c" font-size="46" font-weight="700" letter-spacing="-2">4,044</text>
+      <text y="60" class="sans" fill="#17202c" font-size="46" font-weight="700" letter-spacing="-2">4,100</text>
       <text y="81" class="mono meta">CONTRIBUTIONS</text>
 
       <line y1="104" x2="332" y2="104" stroke="#ccd5e0"/>
       <text y="132" class="mono meta">ACTIVE DAYS</text>
-      <text x="332" y="132" class="mono" fill="#17202c" font-size="13" font-weight="700" text-anchor="end">164 / 365</text>
+      <text x="332" y="132" class="mono" fill="#17202c" font-size="13" font-weight="700" text-anchor="end">165 / 366</text>
       <text y="160" class="mono meta">PEAK DAY</text>
-      <text x="332" y="160" class="mono" fill="#17202c" font-size="13" font-weight="700" text-anchor="end">167</text>
+      <text x="332" y="160" class="mono" fill="#17202c" font-size="13" font-weight="700" text-anchor="end">178</text>
       <text y="188" class="mono meta">CAPTURE</text>
       <g class="status">
         <circle cx="269" cy="184" r="3" fill="#ca155c"/>
@@ -474,7 +475,7 @@
       <text x="104" class="meta">ORDER</text>
       <text x="178" class="meta" fill="#8a77c9">/</text>
       <text x="196" class="meta">REPLAY</text>
-      <text x="1168" class="meta" text-anchor="end">GENERATED 2026-08-16 / NO THIRD-PARTY RENDERER</text>
+      <text x="1168" class="meta" text-anchor="end">GENERATED 2026-08-17 / NO THIRD-PARTY RENDERER</text>
     </g>
   </g>
   <rect x=".5" y=".5" width="1199" height="319" rx="15" fill="none" stroke="#ccd5e0"/>
