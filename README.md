@@ -8,10 +8,9 @@
 - **[f3dx](https://github.com/smigolsmigol/f3dx)** - Rust/Python runtime prototype exploring agent execution, telemetry, replay, and caching.
 - **[tracewright](https://github.com/smigolsmigol/tracewright)** - Evaluation prototype for replaying traces and comparing behavior across test cases.
 
-## Open-source contributions
+## Open source
 
-- [pydantic/monty#382](https://github.com/pydantic/monty/pull/382): fixed a runtime panic caused by duplicate parameter names.
-- [pydantic/monty#390](https://github.com/pydantic/monty/pull/390): fixed parser errors leaking internal Ruff AST debug output.
+- **[Pydantic Monty](https://github.com/pydantic/monty)** - upstream contributor with four merged fixes across runtime safety, parser correctness, error propagation, and diagnostics. [View merged work](https://github.com/pydantic/monty/pulls?q=is%3Apr+author%3Asmigolsmigol+is%3Amerged).
 
 <br />
 
