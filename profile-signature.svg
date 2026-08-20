@@ -55,12 +55,12 @@
     <style>
       .sans { font-family: "Segoe UI", Arial, sans-serif; }
       .mono { font-family: Consolas, "Liberation Mono", monospace; }
-      .meta { fill: #7d8999; font-size: 9px; font-weight: 600; letter-spacing: 1.25px; }
+      .meta { fill: #7d8999; font-size: 9.9px; font-weight: 600; letter-spacing: 1.25px; }
       .faint { fill: #536071; }
       .rule { stroke: #222b37; stroke-width: 1; }
       .node { fill: #0b1118; stroke: #354252; stroke-width: 1; }
-      .node-label { fill: #aeb7c5; font-size: 9px; font-weight: 700; letter-spacing: .8px; }
-      .node-sub { fill: #5f6b7a; font-size: 8px; letter-spacing: .35px; }
+      .node-label { fill: #aeb7c5; font-size: 9.9px; font-weight: 700; letter-spacing: .8px; }
+      .node-sub { fill: #5f6b7a; font-size: 8.8px; letter-spacing: .35px; }
       .cursor { animation: blink 1.35s steps(1) infinite; }
       .sweep { animation: sweep 9s ease-in-out infinite; }
       .pulse { animation: pulse 2.8s ease-in-out infinite; transform-origin: center; }
@@ -120,7 +120,7 @@
 
     <g class="desktop-content">
       <g class="mono">
-        <text x="28" y="34" fill="#ff2f7d" font-size="17" font-weight="700" letter-spacing="-1">f3d1<tspan class="cursor">__</tspan></text>
+        <text x="28" y="34" fill="#ff2f7d" font-size="18.7" font-weight="700" letter-spacing="-1">f3d1<tspan class="cursor">__</tspan></text>
         <text x="112" y="33" class="meta faint">GITHUB / SMIGOLSMIGOL / README.MD</text>
         <circle cx="972" cy="29" r="3" fill="#a4e77c" filter="url(#softGlow)"/>
         <text x="988" y="33" class="meta">PYTHON / RUST / TYPESCRIPT</text>
@@ -132,11 +132,11 @@
           <text x="36" y="0">ENGINEERING PROFILE</text>
         </g>
 
-        <text x="0" y="78" class="sans" fill="url(#nameInk)" font-size="43" font-weight="650" letter-spacing="-2.1">Federico Benini</text>
-        <text x="0" y="118" class="mono" fill="#62d8f7" font-size="12.5" font-weight="700" letter-spacing="1.15">AI SYSTEMS &amp; PLATFORM ENGINEER</text>
+        <text x="0" y="78" class="sans" fill="url(#nameInk)" font-size="47.3" font-weight="650" letter-spacing="-2.1">Federico Benini</text>
+        <text x="0" y="118" class="mono" fill="#62d8f7" font-size="13.75" font-weight="700" letter-spacing="1.15">AI SYSTEMS &amp; PLATFORM ENGINEER</text>
 
-        <text x="0" y="171" class="sans" fill="#909baa" font-size="15">I work where model calls become software:</text>
-        <text x="0" y="197" class="sans" fill="#d7dce4" font-size="15" font-weight="600">runtime, evaluation, observability, and failure control.</text>
+        <text x="0" y="171" class="sans" fill="#909baa" font-size="16.5">I work where model calls become software:</text>
+        <text x="0" y="197" class="sans" fill="#d7dce4" font-size="16.5" font-weight="600">runtime, evaluation, observability, and failure control.</text>
 
         <line x1="0" y1="234" x2="482" y2="234" class="rule"/>
         <text x="0" y="256" class="mono meta">PRODUCTION AI</text>
@@ -186,7 +186,7 @@
           </g>
 
           <line x1="0" y1="202" x2="472" y2="202" class="rule"/>
-          <text x="0" y="228" class="mono" fill="#d1d6df" font-size="11" font-weight="700" letter-spacing="1">FAILURE MUST LEAVE EVIDENCE.</text>
+          <text x="0" y="228" class="mono" fill="#d1d6df" font-size="12.1" font-weight="700" letter-spacing="1">FAILURE MUST LEAVE EVIDENCE.</text>
           <text x="472" y="228" class="mono meta faint" text-anchor="end">REPLAYABLE / MEASURABLE / BOUNDED</text>
         </g>
       </g>
@@ -217,12 +217,12 @@
     </g>
 
     <g class="mobile-content">
-      <text x="48" y="72" class="mono" fill="#ff2f7d" font-size="40" font-weight="700" letter-spacing="-2">f3d1<tspan class="cursor">__</tspan></text>
-      <text x="48" y="123" class="mono" fill="#7d8999" font-size="23" font-weight="600" letter-spacing="3">ENGINEERING PROFILE</text>
-      <text x="48" y="215" class="sans" fill="#eceef3" font-size="64" font-weight="650" letter-spacing="-3.2">Federico <tspan fill="#aeb6c3">Benini</tspan></text>
-      <text x="48" y="281" class="mono" fill="#62d8f7" font-size="30" font-weight="700" letter-spacing="1.5">AI SYSTEMS &amp; PLATFORM ENGINEER</text>
-      <text x="48" y="332" class="sans" fill="#aeb6c3" font-size="25">Model calls into observable, replayable, bounded software.</text>
-      <text x="48" y="382" class="mono" fill="#7d8999" font-size="20" font-weight="600" letter-spacing="1.6">RUNTIME / EVALUATION / OBSERVABILITY / CONTROL</text>
+      <text x="48" y="72" class="mono" fill="#ff2f7d" font-size="44" font-weight="700" letter-spacing="-2">f3d1<tspan class="cursor">__</tspan></text>
+      <text x="48" y="123" class="mono" fill="#7d8999" font-size="25.3" font-weight="600" letter-spacing="3">ENGINEERING PROFILE</text>
+      <text x="48" y="215" class="sans" fill="#eceef3" font-size="70.4" font-weight="650" letter-spacing="-3.2">Federico <tspan fill="#aeb6c3">Benini</tspan></text>
+      <text x="48" y="281" class="mono" fill="#62d8f7" font-size="33" font-weight="700" letter-spacing="1.5">AI SYSTEMS &amp; PLATFORM ENGINEER</text>
+      <text x="48" y="332" class="sans" fill="#aeb6c3" font-size="27.5">Model calls into observable, replayable, bounded software.</text>
+      <text x="48" y="382" class="mono" fill="#7d8999" font-size="22" font-weight="600" letter-spacing="1.6">RUNTIME / EVALUATION / OBSERVABILITY / CONTROL</text>
     </g>
   </g>
 
