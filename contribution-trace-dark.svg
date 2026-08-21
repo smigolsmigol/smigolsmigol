@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
-  <title id="title">smigolsmigol contribution trace: 4149 contributions across 168 active days</title>
-  <desc id="desc">A source-bound replay of the GitHub contribution calendar from 2025-08-17 through 2026-08-20.</desc>
-  <metadata>source=github-graphql; snapshot=db9b1d7d7a; generated=2026-08-20</metadata>
+  <title id="title">smigolsmigol contribution trace: 4245 contributions across 169 active days</title>
+  <desc id="desc">A source-bound replay of the GitHub contribution calendar from 2025-08-17 through 2026-08-21.</desc>
+  <metadata>source=github-graphql; snapshot=21af3ef060; generated=2026-08-21</metadata>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0a1018"/>
@@ -25,7 +25,7 @@
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <clipPath id="clip"><rect x="1" y="1" width="1198" height="318" rx="15"/></clipPath>
-    <path id="activity-route" d="M156.5 165.5 C189.0 165.5 189.0 100.5 221.5 100.5 C234.5 100.5 234.5 165.5 247.5 165.5 C293.0 165.5 293.0 165.5 338.5 165.5 C345.0 165.5 345.0 165.5 351.5 165.5 C358.0 165.5 358.0 152.5 364.5 152.5 C371.0 152.5 371.0 100.5 377.5 100.5 C384.0 100.5 384.0 152.5 390.5 152.5 C397.0 152.5 397.0 178.5 403.5 178.5 C410.0 178.5 410.0 178.5 416.5 178.5 C423.0 178.5 423.0 100.5 429.5 100.5 C436.0 100.5 436.0 126.5 442.5 126.5 C449.0 126.5 449.0 165.5 455.5 165.5 C462.0 165.5 462.0 100.5 468.5 100.5 C475.0 100.5 475.0 178.5 481.5 178.5 C488.0 178.5 488.0 178.5 494.5 178.5 C501.0 178.5 501.0 126.5 507.5 126.5 C514.0 126.5 514.0 126.5 520.5 126.5 C527.0 126.5 527.0 139.5 533.5 139.5 C540.0 139.5 540.0 126.5 546.5 126.5 C553.0 126.5 553.0 152.5 559.5 152.5 C566.0 152.5 566.0 152.5 572.5 152.5 C585.5 152.5 585.5 178.5 598.5 178.5 C605.0 178.5 605.0 139.5 611.5 139.5 C618.0 139.5 618.0 152.5 624.5 152.5 C631.0 152.5 631.0 126.5 637.5 126.5 C644.0 126.5 644.0 139.5 650.5 139.5 C657.0 139.5 657.0 113.5 663.5 113.5 C670.0 113.5 670.0 165.5 676.5 165.5 C683.0 165.5 683.0 165.5 689.5 165.5 C696.0 165.5 696.0 126.5 702.5 126.5 C709.0 126.5 709.0 113.5 715.5 113.5 C722.0 113.5 722.0 100.5 728.5 100.5"/>
+    <path id="activity-route" d="M156.5 165.5 C189.0 165.5 189.0 100.5 221.5 100.5 C234.5 100.5 234.5 165.5 247.5 165.5 C293.0 165.5 293.0 165.5 338.5 165.5 C345.0 165.5 345.0 165.5 351.5 165.5 C358.0 165.5 358.0 152.5 364.5 152.5 C371.0 152.5 371.0 100.5 377.5 100.5 C384.0 100.5 384.0 152.5 390.5 152.5 C397.0 152.5 397.0 178.5 403.5 178.5 C410.0 178.5 410.0 178.5 416.5 178.5 C423.0 178.5 423.0 100.5 429.5 100.5 C436.0 100.5 436.0 126.5 442.5 126.5 C449.0 126.5 449.0 165.5 455.5 165.5 C462.0 165.5 462.0 100.5 468.5 100.5 C475.0 100.5 475.0 178.5 481.5 178.5 C488.0 178.5 488.0 178.5 494.5 178.5 C501.0 178.5 501.0 126.5 507.5 126.5 C514.0 126.5 514.0 126.5 520.5 126.5 C527.0 126.5 527.0 139.5 533.5 139.5 C540.0 139.5 540.0 126.5 546.5 126.5 C553.0 126.5 553.0 152.5 559.5 152.5 C566.0 152.5 566.0 152.5 572.5 152.5 C585.5 152.5 585.5 178.5 598.5 178.5 C605.0 178.5 605.0 139.5 611.5 139.5 C618.0 139.5 618.0 152.5 624.5 152.5 C631.0 152.5 631.0 126.5 637.5 126.5 C644.0 126.5 644.0 139.5 650.5 139.5 C657.0 139.5 657.0 113.5 663.5 113.5 C670.0 113.5 670.0 165.5 676.5 165.5 C683.0 165.5 683.0 165.5 689.5 165.5 C696.0 165.5 696.0 126.5 702.5 126.5 C709.0 126.5 709.0 113.5 715.5 113.5 C722.0 113.5 722.0 152.5 728.5 152.5"/>
     <style>
       .sans { font-family: "Segoe UI", Arial, sans-serif; }
       .mono { font-family: Consolas, "Liberation Mono", monospace; }
@@ -58,7 +58,7 @@
       <text x="105" y="34" class="meta">ACTIVITY TRACE / ROLLING YEAR</text>
       <circle cx="802" cy="30" r="3" fill="#a4e77c" filter="url(#glow)"/>
       <text x="816" y="34" class="meta">SOURCE GITHUB GRAPHQL</text>
-      <text x="1168" y="34" class="meta" text-anchor="end">SNAPSHOT DB9B1D7D7A</text>
+      <text x="1168" y="34" class="meta" text-anchor="end">SNAPSHOT 21AF3EF060</text>
     </g>
 
     <g aria-label="GitHub contribution calendar">
@@ -391,7 +391,7 @@
       <g><title>2026-07-09: 4 contributions</title><rect class="cell" x="646" y="148" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-0.51s"/></g>
       <g><title>2026-07-10: 8 contributions</title><rect class="cell" x="646" y="161" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-0.68s"/></g>
       <g><title>2026-07-11: 0 contributions</title><rect class="cell" x="646" y="174" width="9" height="9" rx="2" fill="#111a24" style="animation-delay:-0.85s"/></g>
-      <g><title>2026-07-12: 45 contributions</title><rect class="cell" x="659" y="96" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-1.02s"/></g>
+      <g><title>2026-07-12: 45 contributions</title><rect class="cell" x="659" y="96" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.02s"/></g>
       <g><title>2026-07-13: 167 contributions</title><rect class="cell hot" x="659" y="109" width="9" height="9" rx="2" fill="#ff2f7d" style="animation-delay:-1.19s"/></g>
       <g><title>2026-07-14: 32 contributions</title><rect class="cell" x="659" y="122" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.36s"/></g>
       <g><title>2026-07-15: 11 contributions</title><rect class="cell" x="659" y="135" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.53s"/></g>
@@ -420,17 +420,18 @@
       <g><title>2026-08-07: 0 contributions</title><rect class="cell" x="698" y="161" width="9" height="9" rx="2" fill="#111a24" style="animation-delay:-2.55s"/></g>
       <g><title>2026-08-08: 0 contributions</title><rect class="cell" x="698" y="174" width="9" height="9" rx="2" fill="#111a24" style="animation-delay:-2.72s"/></g>
       <g><title>2026-08-09: 9 contributions</title><rect class="cell" x="711" y="96" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-0.00s"/></g>
-      <g><title>2026-08-10: 178 contributions</title><rect class="cell hot" x="711" y="109" width="9" height="9" rx="2" fill="#ff2f7d" style="animation-delay:-0.17s"/></g>
-      <g><title>2026-08-11: 82 contributions</title><rect class="cell" x="711" y="122" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-0.34s"/></g>
-      <g><title>2026-08-12: 76 contributions</title><rect class="cell" x="711" y="135" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-0.51s"/></g>
-      <g><title>2026-08-13: 73 contributions</title><rect class="cell" x="711" y="148" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-0.68s"/></g>
-      <g><title>2026-08-14: 47 contributions</title><rect class="cell" x="711" y="161" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-0.85s"/></g>
-      <g><title>2026-08-15: 21 contributions</title><rect class="cell" x="711" y="174" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.02s"/></g>
+      <g><title>2026-08-10: 195 contributions</title><rect class="cell hot" x="711" y="109" width="9" height="9" rx="2" fill="#ff2f7d" style="animation-delay:-0.17s"/></g>
+      <g><title>2026-08-11: 84 contributions</title><rect class="cell" x="711" y="122" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-0.34s"/></g>
+      <g><title>2026-08-12: 77 contributions</title><rect class="cell" x="711" y="135" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-0.51s"/></g>
+      <g><title>2026-08-13: 80 contributions</title><rect class="cell" x="711" y="148" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-0.68s"/></g>
+      <g><title>2026-08-14: 51 contributions</title><rect class="cell" x="711" y="161" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-0.85s"/></g>
+      <g><title>2026-08-15: 23 contributions</title><rect class="cell" x="711" y="174" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.02s"/></g>
       <g><title>2026-08-16: 30 contributions</title><rect class="cell" x="724" y="96" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.19s"/></g>
-      <g><title>2026-08-17: 14 contributions</title><rect class="cell" x="724" y="109" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.36s"/></g>
+      <g><title>2026-08-17: 16 contributions</title><rect class="cell" x="724" y="109" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.36s"/></g>
       <g><title>2026-08-18: 18 contributions</title><rect class="cell" x="724" y="122" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.53s"/></g>
       <g><title>2026-08-19: 21 contributions</title><rect class="cell" x="724" y="135" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.70s"/></g>
-      <g><title>2026-08-20: 3 contributions</title><rect class="cell" x="724" y="148" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-1.87s"/></g>
+      <g><title>2026-08-20: 49 contributions</title><rect class="cell" x="724" y="148" width="9" height="9" rx="2" fill="#31566a" style="animation-delay:-1.87s"/></g>
+      <g><title>2026-08-21: 15 contributions</title><rect class="cell" x="724" y="161" width="9" height="9" rx="2" fill="#223543" style="animation-delay:-2.04s"/></g>
       <use href="#activity-route" fill="none" stroke="#62d8f7" stroke-opacity=".16" stroke-width="7" stroke-linecap="round"/>
       <use class="trace-flow" href="#activity-route" fill="none" stroke="url(#signal)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 11"/>
       <g class="crawler" aria-hidden="true">
@@ -447,21 +448,21 @@
       <circle cx="303" cy="216" r="2" fill="#ff2f7d"/>
       <circle cx="496" cy="216" r="2" fill="#8a77c9"/>
       <circle cx="690" cy="216" r="2" fill="#62d8f7"/>
-      <text x="738" y="220" class="meta" text-anchor="end">2026.08.20</text>
+      <text x="738" y="220" class="meta" text-anchor="end">2026.08.21</text>
       <text x="48" y="249" fill="#e5e9f0" font-size="11" font-weight="700" letter-spacing="1">OBSERVED ACTIVITY / REPLAYED DAILY</text>
       <text x="738" y="249" class="meta" text-anchor="end">33 WEEKLY CHECKPOINTS / 02 PEAK DAYS</text>
     </g>
 
     <g transform="translate(814 80)">
       <text class="mono meta" fill="#62d8f7">SOURCE-BOUND SIGNAL</text>
-      <text y="60" class="sans" fill="#e5e9f0" font-size="46" font-weight="700" letter-spacing="-2">4,149</text>
+      <text y="60" class="sans" fill="#e5e9f0" font-size="46" font-weight="700" letter-spacing="-2">4,245</text>
       <text y="81" class="mono meta">CONTRIBUTIONS</text>
 
       <line y1="104" x2="332" y2="104" stroke="#253140"/>
       <text y="132" class="mono meta">ACTIVE DAYS</text>
-      <text x="332" y="132" class="mono" fill="#e5e9f0" font-size="13" font-weight="700" text-anchor="end">168 / 369</text>
+      <text x="332" y="132" class="mono" fill="#e5e9f0" font-size="13" font-weight="700" text-anchor="end">169 / 370</text>
       <text y="160" class="mono meta">PEAK DAY</text>
-      <text x="332" y="160" class="mono" fill="#e5e9f0" font-size="13" font-weight="700" text-anchor="end">178</text>
+      <text x="332" y="160" class="mono" fill="#e5e9f0" font-size="13" font-weight="700" text-anchor="end">195</text>
       <text y="188" class="mono meta">CAPTURE</text>
       <g class="status">
         <circle cx="269" cy="184" r="3" fill="#ff2f7d"/>
@@ -478,7 +479,7 @@
       <text x="104" class="meta">ORDER</text>
       <text x="178" class="meta" fill="#8a77c9">/</text>
       <text x="196" class="meta">REPLAY</text>
-      <text x="1168" class="meta" text-anchor="end">GENERATED 2026-08-20 / NO THIRD-PARTY RENDERER</text>
+      <text x="1168" class="meta" text-anchor="end">GENERATED 2026-08-21 / NO THIRD-PARTY RENDERER</text>
     </g>
   </g>
   <rect x=".5" y=".5" width="1199" height="319" rx="15" fill="none" stroke="#253140"/>
