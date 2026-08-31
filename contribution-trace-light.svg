@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
-  <title id="title">smigolsmigol contribution trace: 4774 contributions across 178 active days</title>
-  <desc id="desc">A source-bound replay of the GitHub contribution calendar from 2025-08-31 through 2026-08-30.</desc>
-  <metadata>source=github-graphql; snapshot=afb22d600b; generated=2026-08-30</metadata>
+  <title id="title">smigolsmigol contribution trace: 4825 contributions across 179 active days</title>
+  <desc id="desc">A source-bound replay of the GitHub contribution calendar from 2025-08-31 through 2026-08-31.</desc>
+  <metadata>source=github-graphql; snapshot=2432100c90; generated=2026-08-31</metadata>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
@@ -58,7 +58,7 @@
       <text x="105" y="34" class="meta">ACTIVITY TRACE / ROLLING YEAR</text>
       <circle cx="802" cy="30" r="3" fill="#3b7d2b" filter="url(#glow)"/>
       <text x="816" y="34" class="meta">SOURCE GITHUB GRAPHQL</text>
-      <text x="1168" y="34" class="meta" text-anchor="end">SNAPSHOT AFB22D600B</text>
+      <text x="1168" y="34" class="meta" text-anchor="end">SNAPSHOT 2432100C90</text>
     </g>
 
     <g aria-label="GitHub contribution calendar">
@@ -419,14 +419,15 @@
       <g><title>2026-08-20: 49 contributions</title><rect class="cell" x="698" y="148" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-2.38s"/></g>
       <g><title>2026-08-21: 37 contributions</title><rect class="cell" x="698" y="161" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-2.55s"/></g>
       <g><title>2026-08-22: 82 contributions</title><rect class="cell hot" x="698" y="174" width="9" height="9" rx="2" fill="#ca155c" style="animation-delay:-2.72s"/></g>
-      <g><title>2026-08-23: 66 contributions</title><rect class="cell" x="711" y="96" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-0.00s"/></g>
+      <g><title>2026-08-23: 69 contributions</title><rect class="cell" x="711" y="96" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-0.00s"/></g>
       <g><title>2026-08-24: 48 contributions</title><rect class="cell" x="711" y="109" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.17s"/></g>
-      <g><title>2026-08-25: 86 contributions</title><rect class="cell hot" x="711" y="122" width="9" height="9" rx="2" fill="#ca155c" style="animation-delay:-0.34s"/></g>
+      <g><title>2026-08-25: 94 contributions</title><rect class="cell hot" x="711" y="122" width="9" height="9" rx="2" fill="#ca155c" style="animation-delay:-0.34s"/></g>
       <g><title>2026-08-26: 67 contributions</title><rect class="cell" x="711" y="135" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-0.51s"/></g>
       <g><title>2026-08-27: 68 contributions</title><rect class="cell" x="711" y="148" width="9" height="9" rx="2" fill="#4e96ab" style="animation-delay:-0.68s"/></g>
       <g><title>2026-08-28: 36 contributions</title><rect class="cell" x="711" y="161" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-0.85s"/></g>
-      <g><title>2026-08-29: 42 contributions</title><rect class="cell" x="711" y="174" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-1.02s"/></g>
-      <g><title>2026-08-30: 2 contributions</title><rect class="cell" x="724" y="96" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.19s"/></g>
+      <g><title>2026-08-29: 41 contributions</title><rect class="cell" x="711" y="174" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-1.02s"/></g>
+      <g><title>2026-08-30: 29 contributions</title><rect class="cell" x="724" y="96" width="9" height="9" rx="2" fill="#9bc5d3" style="animation-delay:-1.19s"/></g>
+      <g><title>2026-08-31: 14 contributions</title><rect class="cell" x="724" y="109" width="9" height="9" rx="2" fill="#d3e1e8" style="animation-delay:-1.36s"/></g>
       <use href="#activity-route" fill="none" stroke="#087f9c" stroke-opacity=".16" stroke-width="7" stroke-linecap="round"/>
       <use class="trace-flow" href="#activity-route" fill="none" stroke="url(#signal)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 11"/>
       <g class="crawler" aria-hidden="true">
@@ -443,19 +444,19 @@
       <circle cx="303" cy="216" r="2" fill="#ca155c"/>
       <circle cx="496" cy="216" r="2" fill="#8a77c9"/>
       <circle cx="690" cy="216" r="2" fill="#087f9c"/>
-      <text x="738" y="220" class="meta" text-anchor="end">2026.08.30</text>
+      <text x="738" y="220" class="meta" text-anchor="end">2026.08.31</text>
       <text x="48" y="249" fill="#17202c" font-size="11" font-weight="700" letter-spacing="1">OBSERVED ACTIVITY / REPLAYED DAILY</text>
       <text x="738" y="249" class="meta" text-anchor="end">35 WEEKLY CHECKPOINTS / 14 PEAK DAYS</text>
     </g>
 
     <g transform="translate(814 80)">
       <text class="mono meta" fill="#087f9c">SOURCE-BOUND SIGNAL</text>
-      <text y="60" class="sans" fill="#17202c" font-size="46" font-weight="700" letter-spacing="-2">4,774</text>
+      <text y="60" class="sans" fill="#17202c" font-size="46" font-weight="700" letter-spacing="-2">4,825</text>
       <text y="81" class="mono meta">CONTRIBUTIONS</text>
 
       <line y1="104" x2="332" y2="104" stroke="#ccd5e0"/>
       <text y="132" class="mono meta">ACTIVE DAYS</text>
-      <text x="332" y="132" class="mono" fill="#17202c" font-size="13" font-weight="700" text-anchor="end">178 / 365</text>
+      <text x="332" y="132" class="mono" fill="#17202c" font-size="13" font-weight="700" text-anchor="end">179 / 366</text>
       <text y="160" class="mono meta">PEAK DAY</text>
       <text x="332" y="160" class="mono" fill="#17202c" font-size="13" font-weight="700" text-anchor="end">195</text>
       <text y="188" class="mono meta">CAPTURE</text>
@@ -474,7 +475,7 @@
       <text x="104" class="meta">ORDER</text>
       <text x="178" class="meta" fill="#8a77c9">/</text>
       <text x="196" class="meta">REPLAY</text>
-      <text x="1168" class="meta" text-anchor="end">GENERATED 2026-08-30 / NO THIRD-PARTY RENDERER</text>
+      <text x="1168" class="meta" text-anchor="end">GENERATED 2026-08-31 / NO THIRD-PARTY RENDERER</text>
     </g>
   </g>
   <rect x=".5" y=".5" width="1199" height="319" rx="15" fill="none" stroke="#ccd5e0"/>
